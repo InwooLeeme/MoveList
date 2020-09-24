@@ -17,12 +17,12 @@ This is Code Challenge Day11,12
 
 # Conditions
 
-- [ ]Complete all the controllers
-- [ ]Use pug and mixins to render pages and loop over the movies list.
-- [ ]Use templates.
-- [ ]You can only have 3 .pug pages. movies.pug, 404.pug, detail.pug
-- [ ]Use middlewares to add locals like siteTitle
-- [ ]/ should render movies.pug and show a list of movies.
-- [ ]/:id should render the detail of a movie
-- [ ]/filter should filter by year and rating.
-- [ ]The app must behave exactly like the video
+- [ ] Complete all the controllers
+- [ ] Use pug and mixins to render pages and loop over the movies list.
+- [ ] Use templates.
+- [x] You can only have 3 .pug pages. movies.pug, 404.pug, detail.pug
+- [ ] Use middlewares to add locals like siteTitle
+- [ ] / should render movies.pug and show a list of movies.
+- [ ] /:id should render the detail of a movie
+- [ ] /filter should filter by year and rating.
+- [ ] The app must behave exactly like the video
