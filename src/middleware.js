@@ -1,6 +1,4 @@
-import { getMovies } from "./db";
-
-export const localMiddleware = (req, res ,next){
-  res.locals.movies = getMovies;
+export const localMiddleware = (req, res, next) => {
+  res.locals.homeTitle = "Movies";
   next();
-}
+};

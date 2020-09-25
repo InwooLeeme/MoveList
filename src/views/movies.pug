@@ -1,7 +1,8 @@
 doctypehtml
 html
     head
-        title
+        title #{homeTitle} | Prism Movies
     body
         each item in movies
-            h1=item.title
+            a(href="#")
+                h1=item.title
