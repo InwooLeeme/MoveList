@@ -24,4 +24,21 @@ export const movieDetail = (req, res) => {
   let genres = currentMovieInfo.genres;
   res.render("detail", { title, description, genres });
 };
-export const filterMovie = (req, res) => {};
+export const filterMovie = (req, res) => {
+  const {
+    query: { rating, year },
+  } = req;
+  if (year) {
+    const movieYear = getMovieByMinimumYear(year);
+    res.render("movies", { pageTitle: `Searching By year:${year}`, movieYear });
+  } else if (rating) {
+    const movieRating = getMovieByMinimumRating(rating);
+    res.render("movies", {
+      pageTitle: `Searching By rating:${rating}`,
+      movieRating,
+    });
+  } else {
+    res.status(400);
+    res.render("404.pug");
+  }
+};

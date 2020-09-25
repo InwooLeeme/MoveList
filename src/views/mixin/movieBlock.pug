@@ -1,0 +1,11 @@
+mixin movieBlock(movies={})
+    a(href=movies.id)
+        h1=movies.title
+
+mixin ratingBlock(movieRating = {})
+    a(href=movieRating.id)
+        h1=movieRating.title
+
+mixin yearBlock(movieYear = {})
+    a(href=movieYear.id)
+        h1=movieYear.title

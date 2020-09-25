@@ -1,8 +1,25 @@
+include mixin/movieBlock
+
 doctypehtml
 html
     head
         title #{homeTitle} | Prism Movies
     body
-        each item in movies
-            a(href=item.id)
-                h1=item.title
+        if movieYear
+            each year in movieYear
+                +yearBlock({
+                    id:year.id,
+                    title:year.title
+                })
+        else if movieRating
+            each rate in movieRating
+                +ratingBlock({
+                    id:rate.id,
+                    title:rate.title
+                })
+        else
+            each item in movies
+                +movieBlock({
+                    id:item.id,
+                    title:item.title
+                })
